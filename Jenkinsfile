@@ -16,6 +16,7 @@ pipeline {
     stages {
         stage('Cloning our Git') {
             steps {
+                git branch: 'main', credentialsId: 'github_id_new_pat', url: 'https://github.com/macedonsky777/test_node_step_app'
                 sh 'git clone git@github.com:macedonsky777/test_node_step_app.git'
             }
         }
